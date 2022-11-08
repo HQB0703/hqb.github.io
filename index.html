@@ -41,7 +41,10 @@ canvas {
 }
 
 h1 {
-  color: #ff9f9f;
+ background: -webkit-linear-gradient(#FF6699, #FF0099);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
   font-size: 30px;
   position: absolute;
   font-weight: bold;
@@ -51,6 +54,13 @@ h1 {
    margin: 0;
   font-family: 'Lexend Deca', sans-serif; 
   font-family: Arial, Helvetica, sans-serif;
+   animation: flicker 2.5s infinite alternate;     
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  9%, 18%, 22%, 33%, 50%, 55%, 60%, 100% {
   text-shadow:
       0 0 9px #FF66CC,
       0 0 17px #FF66CC,
@@ -60,8 +70,13 @@ h1 {
       0 0 102px #CC33CC,
       0 0 151px #CC33CC;
       0 0 220px #CC33CC;
-
+  }
+  
+  50%, 55%, 22% {        
+      text-shadow: none;
+  }    
 }
+
 
   </style>
 
@@ -544,7 +559,5 @@ var ParticlePool = (function() {
 <div class=”orange”>
 <h1> ❤️Mai Anh❤️</h1>
 </div>
-
  </BODY>
-
 </HTML>
