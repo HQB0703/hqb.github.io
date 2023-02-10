@@ -1,13 +1,30 @@
+<!DOCTYPE html>
 <html>
-
+<head>
 <script>
-	function openInNewTab(url) {
-		var win = window.open(url, '_blank');
-		win.focus();
-	}
-</script>
+function redirect() {
+  window.location.href = "https://www.facebook.com/hq.bi.05?mibextid=LQQJ4d";
+}
 
-<body onload=openInNewTab("https://www.facebook.com/hq.bi.05?mibextid=LQQJ4d")>
+var count=3;
+
+function startCountdown(){
+  setInterval(function(){
+    count--;
+    if(count <= 0){
+      redirect();
+      return;
+    }
+    document.getElementById("countdown").innerHTML = count;
+  }, 1000);
+}
+
+window.onload = startCountdown;
+</script>
+</head>
+<body>
+
+<h1>đợi <span id="countdown">3</span> giây</h1>
 
 </body>
 </html>
