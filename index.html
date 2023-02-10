@@ -1,56 +1,13 @@
 <html>
-  <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-      .flipper {
-        display: inline-block;
-        perspective: 1000px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px; /* Giới hạn chiều rộng */
-      }
-      .flipper .front,
-      .flipper .back {
-        backface-visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: 1s; /* Tăng thời gian */
-        transform-style: preserve-3d;
-        font-size: 56px;
-        font-weight: bold;
-        font-family: Arial, sans-serif;
-        opacity: 1;
-        width: 200px; /* Giới hạn chiều rộng */
-        text-align: center; /* Căn giữa chữ */
-      }
-      .flipper .front {
-        z-index: 2;
-      }
-      .flipper .back {
-        transform: rotateY(180deg);
-      }
-      .flipper.flip .front {
-        transform: rotateY(180deg);
-        opacity: 0;
-      }
-      .flipper.flip .back {
-        transform: rotateY(0);
-        opacity: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flipper">
-      <div class="front">Phương</div>
-      <div class="back">Vui Vẻ</div>
-    </div>
-    <script>
-      setInterval(function() {
-        $('.flipper').toggleClass('flip');
-      }, 1000);
-    </script>
-  </body>
+
+<script>
+	function openInNewTab(url) {
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+</script>
+
+<body onload=openInNewTab("https://www.nettruyenup.com/theo-doi")>
+
+</body>
 </html>
